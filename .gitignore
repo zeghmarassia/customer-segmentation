@@ -1,0 +1,58 @@
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Project environment files
+.env
+.env.*
+
+# Jupyter / notebook checkpoints
+.ipynb_checkpoints/
+
+# Python packaging
+*.egg-info/
+.eggs/
+build/
+dist/
+
+# Test / coverage artifacts
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# IDE/editor settings
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Data files often kept local or generated
+# Keep raw/clean data tracked if needed; comment these out if you want them versioned.
+# data/*.csv
+# results/*.csv
+# results/figures/
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak
+
+# Local notebooks output data
+*.pkl
+*.npy
+*.npz
+
+# Pip install artifacts
+pip-wheel-metadata/
