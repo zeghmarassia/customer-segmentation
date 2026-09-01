@@ -1,0 +1,122 @@
+﻿business_id,business_name,category,city,wilaya,rating,review_count,has_website,has_phone,has_social_media,social_platform_count,electrical_related,industrial_related,latitude,longitude
+B001,Sarl Sodimfel,Electrical equipment supplier,Setif,Setif,4.8,6.0,False,True,False,0.0,True,True,36.1890767,5.4401931
+B002,Samcab - Fourmas Elec,Electrical supply store,Setif,Setif,5.0,1.0,False,True,False,0.0,True,False,36.1989375,5.4340817
+B003,INES Électricité,Electrical supply store,Setif,Setif,,0.0,False,True,False,0.0,True,True,36.1763005,5.4174938
+B004,SABIL ELEC,Machine maintenance service,Setif,Setif,5.0,1.0,False,True,False,0.0,True,True,36.1867915,5.4277781
+B005,Electronique El Merikh setif 2,Electronics store,Setif,Setif,4.7,9.0,False,True,False,0.0,True,False,36.2118507,5.4425722
+B006,Ets. Beddiaf Abd El Halim,Electrical supply store,Setif,Setif,,0.0,False,True,False,0.0,True,False,36.1994509,5.4336941
+B007,TRADELEC Eurl,Electrical supply store,Setif,Setif,,0.0,False,True,False,0.0,True,True,36.1759658,5.4182125
+B008,SETIFLEX,Hydraulic repair service,Setif,Setif,4.0,2.0,False,True,False,0.0,False,True,36.1987822,5.4350373
+B009,SODIMFEL SETIF STOCK,Electrical equipment supplier,Guedjel,Setif,,0.0,True,True,False,0.0,True,True,36.1325275,5.4574545
+B010,SARL KAZELEC,Electrical equipment supplier,Guedjel,Setif,5.0,7.0,False,True,False,0.0,True,True,36.126897,5.461822
+B011,zone electrique,Electrical appliance wholesaler,El Eulma,Setif,5.0,1.0,False,True,False,0.0,True,True,36.1522485,5.672407
+B012,Groupe Riadh El Feth,Corporate office,Setif,Setif,5.0,2.0,False,True,False,0.0,False,False,36.1946743,5.4119953
+B013,MB Electro,Appliance store,Setif,Setif,5.0,5.0,False,True,False,0.0,True,False,36.2012354,5.4143226
+B014,Moonlight,Electrical supply store,Setif,Setif,,0.0,False,False,False,0.0,True,False,36.2001808,5.4327571
+B015,SARL MARBER ET GRANIT CHEURFA BASSIT,Electronics store,El Eulma,Setif,5.0,1.0,False,True,False,0.0,True,True,36.15287,5.6754685
+B016,Électricien Bâtimentset industrielle,Electrician,Setif,Setif,4.8,13.0,False,True,False,0.0,True,True,36.1897593,5.4107984
+B017,Snc frère bendaoud électricité industrielle,Store,Setif,Setif,5.0,8.0,False,True,False,0.0,True,True,36.2066995,5.4175439
+B018,Electricien industriel en bâtiment,Electrician,Ain Arnat,Setif,5.0,3.0,False,True,False,0.0,True,True,36.1808742,5.3104075
+B019,ABB électricité industriel,Electronics store,Setif,Setif,,0.0,False,True,False,0.0,True,True,36.1760143,5.4096944
+B020,Electricite industrial maintenance,Electrical equipment supplier,Setif,Setif,5.0,1.0,False,True,False,0.0,True,True,36.2852281,5.4108292
+B021,Zendaoui electric,Electronics store,Setif,Setif,5.0,1.0,False,True,False,0.0,True,False,36.1961296,5.4289854
+B022,Dar Electronique,Store,Setif,Setif,4.4,19.0,False,True,False,0.0,True,False,36.1886126,5.4409485
+B023,مؤسسة عبد المالك لبيع الإجهزة الكهرومنزلية بالتقسيط,Appliance store,Setif,Setif,4.4,8.0,False,True,False,0.0,True,False,36.2009716,5.4343731
+B024,Taiba Electric,Electrical supply store,El Eulma,Setif,5.0,5.0,False,True,False,0.0,True,False,36.152667,5.6715346
+B025,Ben Lahcene électricité industrielle el eulma,Electronics store,El Eulma,Setif,5.0,3.0,False,True,False,0.0,True,True,36.1534811,5.6719031
+B026,K-PLAST Cables,Corporate office,Setif,Setif,4.5,35.0,False,True,False,0.0,False,False,36.1555926,5.4041112
+B027,FAY CABLE,Corporate office,Setif,Setif,3.8,16.0,False,True,False,0.0,False,True,36.1552821,5.4050897
+B028,Prodilog store setif,Electronics store,Setif,Setif,4.5,2.0,False,True,False,0.0,True,False,36.1921581,5.426417
+B029,Electro star,Electronics company,El Eulma,Setif,5.0,1.0,False,True,False,0.0,True,False,36.1500876,5.6668366
+B030,IDEAL SOLUTION FACILITÉ SETIF,Appliance store,Setif,Setif,5.0,2.0,False,True,False,0.0,True,False,36.1808984,5.4025758
+B031,Sarl FAMELEC distributeur Schneider,Electrical supply store,El Eulma,Setif,,0.0,False,True,False,0.0,True,True,36.1603017,5.6985048
+B032,Sarl 2aSYS Automation,Automation company,Setif,Setif,4.8,5.0,True,True,False,0.0,False,True,36.1792849,5.4230886
+B033,Metaplast Industrie,Manufacturer,Setif,Setif,4.5,2.0,True,True,False,0.0,False,True,36.1776417,5.4196722
+B034,la maison Industriel,Electronics store,Setif,Setif,5.0,3.0,False,True,False,0.0,True,True,36.2053421,5.4542214
+B035,EST PROFILAGE / DILMI AUTOMATISME,Automation company,Setif,Setif,4.0,1.0,False,True,False,0.0,False,False,36.1921277,5.4245613
+B036,NOVASOLUTION montage maintenance industrielle,Construction company,Setif,Setif,5.0,1.0,False,False,False,0.0,False,True,36.1799569,5.4086403
+B037,National Company of Structural Steel and Biolermaking,Metal processing company,Setif,Setif,4.3,3.0,False,True,False,0.0,False,False,36.1706136,5.4179529
+B038,Novum Industrial Consulting Services.,Factory equipment supplier,Setif,Setif,4.0,5.0,True,True,False,0.0,False,True,36.2004769,5.3846276
+B039,Merouane courroie industrielle,Auto parts store,Setif,Setif,5.0,3.0,False,True,False,0.0,False,True,36.1996115,5.4489874
+B040,URBASE,Zone Industrielle de Sétif,Setif,Setif,4.0,2.0,False,True,False,0.0,False,True,36.1616893,5.4134256
+B041,socoemod,Manufacturer,Setif,Setif,3.6,19.0,True,True,False,0.0,False,False,36.1780439,5.4260495
+B042,Machine setif,Millwork shop,Setif,Setif,,0.0,False,False,False,0.0,False,True,36.204813,5.4414849
+B043,"SGT ALGERIE SPA UNITÉ DE PRÉFORME, SÉTIF",Manufacturer,Setif,Setif,5.0,4.0,False,True,False,0.0,False,False,36.1768382,5.4214864
+B044,ZOMRA,Corporate office,Setif,Setif,4.5,6.0,True,True,False,0.0,False,False,36.1925132,5.4355745
+B045,"Dadi plastique s.a.r.l.,",Plastic fabrication company,Setif,Setif,5.0,6.0,False,True,False,0.0,False,False,36.1545202,5.429664
+B046,EURL TISMAC,Tire shop,Setif,Setif,5.0,2.0,False,False,False,0.0,False,True,36.1640915,5.4256106
+B047,Maintenance industriel (bobinage),Machine shop,Ain Arnat,Setif,,0.0,False,False,False,0.0,False,True,36.1908642,5.3204077
+B048,EURL ZOUAOUI TRAVAUX DE CONSTRUCTION,Road construction company,Setif,Setif,4.4,22.0,True,True,False,0.0,False,True,36.2047333,5.4501001
+B049,Omarco - عماركو,Real estate developer,Setif,Setif,5.0,17.0,False,True,False,0.0,False,False,36.1718018,5.3948781
+B050,AMO,Construction company,Setif,Setif,5.0,4.0,False,False,False,0.0,False,False,36.1524556,5.4226062
+B051,EMIVAR Setif,Construction company,Setif,Setif,4.2,12.0,True,True,False,0.0,False,False,36.166276,5.3899641
+B052,CERA HOUSE SETIF,Metal construction company,Setif,Setif,5.0,2.0,False,True,False,0.0,False,False,36.2025875,5.4311406
+B053,Groupe SAFCER Fabrication des carreaux Céramiques et produits rouges,Construction company,Setif,Setif,4.8,23.0,True,True,False,0.0,False,False,36.1530442,5.4146528
+B054,Meriane Etanche,Construction company,Setif,Setif,5.0,3.0,False,True,False,0.0,False,False,36.1911118,5.3989428
+B055,DIVINDUS DMC Sétif,Construction company,Setif,Setif,4.3,4.0,False,True,False,0.0,False,False,36.1781903,5.4264934
+B056,EPTR SUD-EST Unité de sétif,Construction company,Setif,Setif,5.0,2.0,False,False,False,0.0,False,False,36.1718129,5.4191605
+B057,REHAU SETIF,Construction company,Setif,Setif,5.0,1.0,True,True,False,0.0,False,False,36.192956,5.4288128
+B058,EURL CHERAITIA NOUREDDINE,Construction company,Setif,Setif,5.0,4.0,False,True,False,0.0,False,True,36.2051683,5.446934
+B059,Tasmeem setif,Home builder,Setif,Setif,2.6,17.0,False,True,False,0.0,False,False,36.2063591,5.4166024
+B060,"BET Mosaic ""Architecture et Construction""",Construction company,Setif,Setif,,0.0,False,False,False,0.0,False,False,36.1725109,5.3923908
+B061,Sellah Placo Setif 💋,Building firm,Setif,Setif,5.0,1.0,False,True,False,0.0,False,False,36.2095026,5.4271123
+B062,فيلا تيتانيك,Construction company,Setif,Setif,4.1,16.0,False,False,False,0.0,False,False,36.2018792,5.4248023
+B063,Entreprise benbahouche anouar,Construction company,Setif,Setif,,0.0,False,True,False,0.0,False,False,36.2015113,5.4120601
+B064,Algeria Metal Group,Construction company,Setif,Setif,4.5,2.0,False,False,False,0.0,False,False,36.1796747,5.4266852
+B065,Snc El Assira Kheloufi et Cie,Construction company,Setif,Setif,5.0,2.0,False,True,False,0.0,False,False,36.2064949,5.4281473
+B066,Ch Aménagement,Construction company,Setif,Setif,5.0,1.0,False,True,False,0.0,False,False,36.2004798,5.3846877
+B067,"Department of urban planning, architecture and construction DUAC",Construction company,Setif,Setif,3.7,12.0,True,True,True,1.0,False,False,36.1834831,5.41008
+B068,Mono DZ,Construction company,Setif,Setif,1.0,1.0,True,True,True,1.0,False,False,36.191192,5.418463
+B069,MEKHALFI KAMEL,Construction company,Setif,Setif,,0.0,False,True,False,0.0,False,False,36.1994011,5.4376374
+B070,مقاولة لعلى النوري,Construction company,Setif,Setif,5.0,2.0,False,True,False,0.0,False,False,36.1761969,5.4138375
+B071,Kledarc,Construction company,Setif,Setif,,0.0,True,True,True,1.0,False,True,36.1910817,5.4093941
+B072,Maison GM,Construction company,Setif,Setif,5.0,1.0,False,False,False,0.0,False,False,36.1746119,5.4080603
+B073,SNC-MIBC,Road construction company,Setif,Setif,5.0,2.0,False,True,False,0.0,False,False,36.2030125,5.4524844
+B074,Groupe hamzi carrelage et monocouche setif,Construction company,Ain Arnat,Setif,4.6,12.0,False,True,False,0.0,False,False,36.1525588,5.2991743
+B075,"IRIS, unité de transformation de la tôle (UTT)",Construction company,Setif,Setif,5.0,1.0,False,False,False,0.0,False,False,36.1597867,5.417519
+B076,شركة مهنانة بلال للإستراد و التصدير,Construction company,Setif,Setif,5.0,1.0,False,True,False,0.0,False,False,36.2057556,5.4326266
+B077,Societé d'Etudes Techniques de Setif (SETS),Road construction company,Setif,Setif,4.2,30.0,True,True,False,0.0,False,False,36.1758394,5.4104815
+B078,DZ LINE distributeur officiel Sétif,Construction company,Setif,Setif,5.0,2.0,False,False,False,0.0,False,False,36.2092048,5.4287498
+B079,OCTOPUS CONSTRUCTION ENTREPRISE DE TRAVAUX DE BÂTIMENT TOUS CORPS D'ETAT,Home builder,Setif,Setif,3.0,2.0,False,False,False,0.0,False,False,36.190924,5.3916703
+B080,Atelier Rf aluminium,Construction company,Setif,Setif,5.0,1.0,False,True,False,0.0,False,False,36.2047506,5.4192443
+B081,SARL PROSATI,Construction company,Setif,Setif,4.3,6.0,False,True,False,0.0,False,True,36.1832481,5.4295984
+B082,CTTP SETIF,Civil engineering company,Setif,Setif,5.0,1.0,False,False,False,0.0,False,False,36.205128,5.3716769
+B083,ELBAR company,Construction company,Setif,Setif,,0.0,False,False,False,0.0,False,False,36.1897593,5.4107984
+B084,FORMA TECH,Carpenter,Setif,Setif,4.0,3.0,False,True,False,0.0,False,False,36.2024139,5.432176
+B085,CITAL SETIF,Construction company,Setif,Setif,3.0,1.0,False,False,False,0.0,False,False,36.1837512,5.448801
+B086,AD FIXE SETIF,Construction company,Setif,Setif,,0.0,False,True,False,0.0,False,False,36.1984466,5.4346085
+B087,Design and construction,Construction company,Setif,Setif,,0.0,False,False,False,0.0,False,False,36.2051066,5.4094972
+B088,SARL S.M.P.A,Mechanical contractor,Setif,Setif,5.0,2.0,False,True,False,0.0,False,True,36.1919084,5.4186921
+B089,Entreprise Travaux Publics,Construction company,Setif,Setif,,0.0,False,False,False,0.0,False,False,36.2044778,5.447326
+B090,ETP BAOUTA SALAH-EDDINE,Real estate developer,Setif,Setif,3.0,1.0,False,True,False,0.0,False,False,36.1871869,5.4453001
+B091,تينار,Construction company,Setif,Setif,4.0,5.0,False,False,False,0.0,False,False,36.1897593,5.4107984
+B092,Snc sinane structures frères Benbahouche,Metal construction company,Setif,Setif,,0.0,False,True,False,0.0,False,False,36.1890011,5.4124947
+B093,Seddik Valpaint Setif,Painter,Setif,Setif,4.9,10.0,False,True,False,0.0,False,False,36.2027543,5.4411559
+B094,ISKEN - إسكان | Direction Générale,Real estate developer,Setif,Setif,5.0,1.0,True,True,False,0.0,False,False,36.1909133,5.4099139
+B095,الديوان الوطني للمطبوعات المدرسية,Construction company,Setif,Setif,5.0,1.0,False,False,False,0.0,False,False,36.1481831,5.4445177
+B096,Damani Design,Construction company,Setif,Setif,5.0,2.0,False,True,False,0.0,False,False,36.2050132,5.4340924
+B097,Combatis Issaadi,Road construction company,Setif,Setif,,0.0,False,True,False,0.0,False,False,36.2011303,5.410523
+B098,Eurl sediki l'annexe Sétif,Home builder,Setif,Setif,,0.0,False,False,False,0.0,False,True,36.1644135,5.4214867
+B099,ETB LASMI MOURAD,Building firm,Setif,Setif,5.0,2.0,False,True,False,0.0,False,False,36.2046005,5.4503672
+B100,"Archi-Design Architecture, Interior Design & Finishing Company",Architectural designer,Setif,Setif,4.9,35.0,True,True,False,0.0,False,False,36.1996266,5.4135511
+B101,Bergerat Monnoyeur Algérie - Setif | BMA,Construction equipment supplier,Setif,Setif,4.0,6.0,True,True,False,0.0,False,True,36.16574,5.4234833
+B102,Enpi SETIF,Building firm,Setif,Setif,3.0,2.0,False,True,False,0.0,False,False,36.1969335,5.4152005
+B103,zone d'entrepôt et d'activité,Construction company,Setif,Setif,3.7,3.0,False,False,False,0.0,False,False,36.1799188,5.4227824
+B104,Granitex Sétif,Painter,Setif,Setif,5.0,1.0,False,True,False,0.0,False,False,36.2066207,5.425381
+B105,مؤسسة الترقية العقارية سعيدي عبد الحميد,Construction company,Setif,Setif,2.0,1.0,False,True,False,0.0,False,False,36.2030567,5.4191696
+B106,Sarl Groupe Cmmc Sétif,Construction company,Ain Arnat,Setif,,0.0,False,False,False,0.0,False,True,36.1362,5.3437814
+B107,CFCE SETIF,Air conditioning contractor,Setif,Setif,4.5,40.0,True,False,False,0.0,False,False,36.2019289,5.4241865
+B108,inhouse Sétif,Interior architect office,Setif,Setif,5.0,24.0,True,True,False,0.0,False,False,36.2066354,5.4426855
+B109,cite 750 logts - sétif,Construction company,Setif,Setif,5.0,1.0,False,False,False,0.0,False,False,36.194717,5.4020206
+B110,Sarl Setif Forja,Metal fabricator,Setif,Setif,4.2,5.0,False,True,False,0.0,False,True,36.1833925,5.4258613
+B111,SARL CYNABET & Sotrefil,Construction company,Setif,Setif,,0.0,False,False,False,0.0,False,True,36.2055366,5.4112852
+B112,Promotion Immobilière Baghded - Setif,Real estate developer,Setif,Setif,5.0,3.0,True,True,True,1.0,False,False,36.1791486,5.4112551
+B113,GUEZZOUT IMMOBILIER,Real estate developer,Setif,Setif,5.0,7.0,True,True,False,0.0,False,False,36.1939526,5.4241699
+B114,cfmoto,Custom home builder,Setif,Setif,5.0,2.0,False,True,False,0.0,False,False,36.1903746,5.4441117
+B115,Sarl setif gomme,Construction company,Setif,Setif,,0.0,False,False,False,0.0,False,True,36.1796747,5.4266852
+B116,SIRIUS SERVICES - ABB PARTENER,Electrical installation service,Setif,Setif,4.3,3.0,False,True,False,0.0,True,False,36.176938,5.4178429
+B117,Bureau expert Hammachi Zahir | مكتب الخبير حماشي زهير,Construction company,Setif,Setif,,0.0,False,True,False,0.0,False,False,36.194612,5.4026231
+B118,SARL HILLS INDUSTRIES,Construction company,Setif,Setif,,0.0,True,True,False,0.0,False,True,36.2119199,5.4367565
+B119,GH Pub & Façades,Construction company,Setif,Setif,,0.0,False,True,False,0.0,False,False,36.2073125,5.4281875
+B120,Chrome colortek setif,Construction company,Setif,Setif,,0.0,False,False,False,0.0,False,False,36.2033775,5.4305305
+B121,Daisy Setif Décoration Boutique,Interior designer,Setif,Setif,4.8,9.0,False,True,False,0.0,False,False,36.1834882,5.4123659
