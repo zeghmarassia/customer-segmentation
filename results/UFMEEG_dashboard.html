@@ -1,0 +1,1300 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>UFMEEG Customer Segmentation Dashboard</title>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    background: #f4f6f9;
+    color: #1f2937;
+}
+
+.header {
+    background: #111827;
+    color: white;
+    padding: 32px 45px;
+}
+
+.header h1 {
+    margin: 0 0 8px 0;
+    font-size: 30px;
+}
+
+.header p {
+    margin: 0;
+    color: #cbd5e1;
+}
+
+.container {
+    max-width: 1400px;
+    margin: auto;
+    padding: 30px;
+}
+
+.section-title {
+    margin-top: 35px;
+    margin-bottom: 18px;
+    font-size: 22px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns:
+        repeat(auto-fit, minmax(210px, 1fr));
+
+    gap: 18px;
+}
+
+.card {
+    background: white;
+    border-radius: 12px;
+    padding: 22px;
+    box-shadow:
+        0 2px 8px rgba(0,0,0,0.06);
+}
+
+.card-title {
+    font-size: 13px;
+    color: #6b7280;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+}
+
+.card-value {
+    font-size: 30px;
+    font-weight: 700;
+    margin-top: 8px;
+}
+
+.card-description {
+    margin-top: 5px;
+    font-size: 13px;
+    color: #6b7280;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns:
+        repeat(auto-fit, minmax(420px, 1fr));
+
+    gap: 22px;
+}
+
+.panel {
+    background: white;
+    border-radius: 12px;
+    padding: 22px;
+    margin-top: 22px;
+
+    box-shadow:
+        0 2px 8px rgba(0,0,0,0.06);
+}
+
+.panel h3 {
+    margin-top: 0;
+}
+
+.chart-container {
+    position: relative;
+    height: 330px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    text-align: left;
+    background: #f8fafc;
+    padding: 12px;
+    font-size: 13px;
+    color: #475569;
+}
+
+td {
+    padding: 12px;
+    border-top: 1px solid #e5e7eb;
+    font-size: 14px;
+}
+
+tr:hover {
+    background: #f8fafc;
+}
+
+.badge {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.badge.high {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.badge.medium {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.badge.low {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.product-row {
+    margin-bottom: 20px;
+}
+
+.product-label {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.progress {
+    height: 10px;
+    background: #e5e7eb;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    background: #2563eb;
+    border-radius: 10px;
+}
+
+.insight {
+    background: #f8fafc;
+    border-left: 4px solid #2563eb;
+    padding: 15px 18px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+.footer {
+    margin-top: 40px;
+    padding: 25px;
+    text-align: center;
+    color: #64748b;
+    font-size: 13px;
+}
+
+@media (max-width: 700px) {
+
+    .container {
+        padding: 15px;
+    }
+
+    .header {
+        padding: 25px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="header">
+
+    <h1>UFMEEG Customer Segmentation & Prospect Analysis</h1>
+
+    <p>
+        Data-driven identification of potential B2B customers
+        for electricity meters, gas meters and gas leak detectors.
+    </p>
+
+</div>
+
+
+<div class="container">
+
+
+<!-- ====================================================== -->
+<!-- EXECUTIVE SUMMARY -->
+<!-- ====================================================== -->
+
+<h2 class="section-title">
+    Executive Summary
+</h2>
+
+
+<div class="cards">
+
+    <div class="card">
+        <div class="card-title">
+            Businesses analyzed
+        </div>
+
+        <div class="card-value">
+            121
+        </div>
+
+        <div class="card-description">
+            Businesses in the collected dataset
+        </div>
+    </div>
+
+
+    <div class="card">
+        <div class="card-title">
+            Clusters
+        </div>
+
+        <div class="card-value">
+            8
+        </div>
+
+        <div class="card-description">
+            Customer segments identified
+        </div>
+    </div>
+
+
+    <div class="card">
+        <div class="card-title">
+            High prospects
+        </div>
+
+        <div class="card-value">
+            5
+        </div>
+
+        <div class="card-description">
+            Priority targets for sales
+        </div>
+    </div>
+
+
+    <div class="card">
+        <div class="card-title">
+            Medium prospects
+        </div>
+
+        <div class="card-value">
+            19
+        </div>
+
+        <div class="card-description">
+            Potential secondary targets
+        </div>
+    </div>
+
+
+    <div class="card">
+        <div class="card-title">
+            Low prospects
+        </div>
+
+        <div class="card-value">
+            97
+        </div>
+
+        <div class="card-description">
+            Lower current priority
+        </div>
+    </div>
+
+</div>
+
+
+<!-- ====================================================== -->
+<!-- CHARTS -->
+<!-- ====================================================== -->
+
+<div class="grid">
+
+
+    <div class="panel">
+
+        <h3>
+            Prospect Distribution
+        </h3>
+
+        <div class="chart-container">
+
+            <canvas id="prospectChart"></canvas>
+
+        </div>
+
+    </div>
+
+
+    <div class="panel">
+
+        <h3>
+            Businesses per Cluster
+        </h3>
+
+        <div class="chart-container">
+
+            <canvas id="clusterChart"></canvas>
+
+        </div>
+
+    </div>
+
+
+</div>
+
+
+<!-- ====================================================== -->
+<!-- PRODUCT FIT -->
+<!-- ====================================================== -->
+
+<div class="panel">
+
+    <h3>
+        Product Fit Overview
+    </h3>
+
+    <p style="color:#64748b;">
+        Average product relevance across the analyzed businesses.
+        Higher values indicate stronger potential fit.
+    </p>
+
+    
+    <div class="product-row">
+        <div class="product-label">
+            <span>Electricity meters</span>
+            <strong>19.1/100</strong>
+        </div>
+
+        <div class="progress">
+            <div class="progress-bar"
+                 style="width:19.09090909090909%">
+            </div>
+        </div>
+    </div>
+    
+    <div class="product-row">
+        <div class="product-label">
+            <span>Gas meters</span>
+            <strong>4.4/100</strong>
+        </div>
+
+        <div class="progress">
+            <div class="progress-bar"
+                 style="width:4.380165289256198%">
+            </div>
+        </div>
+    </div>
+    
+    <div class="product-row">
+        <div class="product-label">
+            <span>Gas leak detectors</span>
+            <strong>16.2/100</strong>
+        </div>
+
+        <div class="progress">
+            <div class="progress-bar"
+                 style="width:16.198347107438018%">
+            </div>
+        </div>
+    </div>
+    
+    <div class="product-row">
+        <div class="product-label">
+            <span>Wholesale potential</span>
+            <strong>44.0/100</strong>
+        </div>
+
+        <div class="progress">
+            <div class="progress-bar"
+                 style="width:44.049586776859506%">
+            </div>
+        </div>
+    </div>
+    
+
+</div>
+
+
+<!-- ====================================================== -->
+<!-- PCA -->
+<!-- ====================================================== -->
+
+<div class="panel">
+
+    <h3>
+        Customer Segmentation — PCA Visualization
+    </h3>
+
+    <p style="color:#64748b;">
+        Each point represents a business. Businesses located near
+        each other have similar characteristics according to the
+        features used for clustering.
+    </p>
+
+    <div class="chart-container"
+         style="height:500px;">
+
+        <canvas id="pcaChart"></canvas>
+
+    </div>
+
+</div>
+
+
+<!-- ====================================================== -->
+<!-- TOP PROSPECTS -->
+<!-- ====================================================== -->
+
+<div class="panel">
+
+    <h3>
+        Top 20 Prospects
+    </h3>
+
+    <p style="color:#64748b;">
+        Businesses ranked according to the prospect scoring model.
+    </p>
+
+    <div style="overflow-x:auto;">
+
+        <table>
+
+            <thead>
+
+                <tr>
+                    <th>Rank</th>
+                    <th>Business</th>
+                    <th>Category</th>
+                    <th>Cluster</th>
+                    <th>Score</th>
+                    <th>Level</th>
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                
+    <tr>
+        <td>1</td>
+        <td><strong>SARL KAZELEC</strong></td>
+        <td>Electrical equipment supplier</td>
+        <td>Cluster 4</td>
+        <td><strong>85.85</strong></td>
+        <td>
+            <span class="badge high">
+                HIGH
+            </span>
+        </td>
+    </tr>
+    
+    <tr>
+        <td>2</td>
+        <td><strong>Sarl Sodimfel</strong></td>
+        <td>Electrical equipment supplier</td>
+        <td>Cluster 4</td>
+        <td><strong>85.14</strong></td>
+        <td>
+            <span class="badge high">
+                HIGH
+            </span>
+        </td>
+    </tr>
+    
+    <tr>
+        <td>3</td>
+        <td><strong>Electricite industrial maintenance</strong></td>
+        <td>Electrical equipment supplier</td>
+        <td>Cluster 4</td>
+        <td><strong>83.45</strong></td>
+        <td>
+            <span class="badge high">
+                HIGH
+            </span>
+        </td>
+    </tr>
+    
+    <tr>
+        <td>4</td>
+        <td><strong>zone electrique</strong></td>
+        <td>Electrical appliance wholesaler</td>
+        <td>Cluster 4</td>
+        <td><strong>83.45</strong></td>
+        <td>
+            <span class="badge high">
+                HIGH
+            </span>
+        </td>
+    </tr>
+    
+    <tr>
+        <td>5</td>
+        <td><strong>SODIMFEL SETIF STOCK</strong></td>
+        <td>Electrical equipment supplier</td>
+        <td>Cluster 0</td>
+        <td><strong>82.25</strong></td>
+        <td>
+            <span class="badge high">
+                HIGH
+            </span>
+        </td>
+    </tr>
+    
+    <tr>
+        <td>6</td>
+        <td><strong>Ben Lahcene électricité industrielle el eulma</strong></td>
+        <td>Electronics store</td>
+        <td>Cluster 4</td>
+        <td><strong>69.15</strong></td>
+        <td>
+            <span class="badge medium">
+                MEDIUM
+            </span>
+        </td>
+    </tr>
+    
+    <tr>
+        <td>7</td>
+        <td><strong>Bergerat Monnoyeur Algérie - Setif | BMA</strong></td>
+        <td>Construction equipment supplier</td>
+        <td>Cluster 2</td>
+        <td><strong>67.22</strong></td>
+        <td>
+            <span class="badge medium">
+                MEDIUM
+            </span>
+        </td>
+    </tr>
+    
+    <tr>
+        <td>8</td>
+        <td><strong>la maison Industriel</strong></td>
+        <td>Electronics store</td>
+        <td>Cluster 4</td>
+        <td><strong>67.15</strong></td>
+        <td>
+            <span class="badge medium">
+                MEDIUM
+            </span>
+        </td>
+    </tr>
+    
+    <tr>
+        <td>9</td>
+        <td><strong>Sarl FAMELEC distributeur Schneider</strong></td>
+        <td>Electrical supply store</td>
+        <td>Cluster 0</td>
+        <td><strong>67.00</strong></td>
+        <td>
+            <span class="badge medium">
+                MEDIUM
+            </span>
+        </td>
+    </tr>
+    
+    <tr>
+        <td>10</td>
+        <td><strong>Novum Industrial Consulting Services.</strong></td>
+        <td>Factory equipment supplier</td>
+        <td>Cluster 2</td>
+        <td><strong>66.96</strong></td>
+        <td>
+            <span class="badge medium">
+                MEDIUM
+            </span>
+        </td>
+    </tr>
+    
+    <tr>
+        <td>11</td>
+        <td><strong>SARL MARBER ET GRANIT CHEURFA BASSIT</strong></td>
+        <td>Electronics store</td>
+        <td>Cluster 4</td>
+        <td><strong>65.95</strong></td>
+        <td>
+            <span class="badge medium">
+                MEDIUM
+            </span>
+        </td>
+    </tr>
+    
+    <tr>
+        <td>12</td>
+        <td><strong>Electronique El Merikh setif 2</strong></td>
+        <td>Electronics store</td>
+        <td>Cluster 4</td>
+        <td><strong>65.52</strong></td>
+        <td>
+            <span class="badge medium">
+                MEDIUM
+            </span>
+        </td>
+    </tr>
+    
+    <tr>
+        <td>13</td>
+        <td><strong>MB Electro</strong></td>
+        <td>Appliance store</td>
+        <td>Cluster 4</td>
+        <td><strong>65.36</strong></td>
+        <td>
+            <span class="badge medium">
+                MEDIUM
+            </span>
+        </td>
+    </tr>
+    
+    <tr>
+        <td>14</td>
+        <td><strong>Taiba Electric</strong></td>
+        <td>Electrical supply store</td>
+        <td>Cluster 4</td>
+        <td><strong>65.36</strong></td>
+        <td>
+            <span class="badge medium">
+                MEDIUM
+            </span>
+        </td>
+    </tr>
+    
+    <tr>
+        <td>15</td>
+        <td><strong>Samcab - Fourmas Elec</strong></td>
+        <td>Electrical supply store</td>
+        <td>Cluster 4</td>
+        <td><strong>63.45</strong></td>
+        <td>
+            <span class="badge medium">
+                MEDIUM
+            </span>
+        </td>
+    </tr>
+    
+    <tr>
+        <td>16</td>
+        <td><strong>Zendaoui electric</strong></td>
+        <td>Electronics store</td>
+        <td>Cluster 4</td>
+        <td><strong>63.45</strong></td>
+        <td>
+            <span class="badge medium">
+                MEDIUM
+            </span>
+        </td>
+    </tr>
+    
+    <tr>
+        <td>17</td>
+        <td><strong>مؤسسة عبد المالك لبيع الإجهزة الكهرومنزلية بالتقسيط</strong></td>
+        <td>Appliance store</td>
+        <td>Cluster 4</td>
+        <td><strong>62.62</strong></td>
+        <td>
+            <span class="badge medium">
+                MEDIUM
+            </span>
+        </td>
+    </tr>
+    
+    <tr>
+        <td>18</td>
+        <td><strong>IDEAL SOLUTION FACILITÉ SETIF</strong></td>
+        <td>Appliance store</td>
+        <td>Cluster 4</td>
+        <td><strong>62.15</strong></td>
+        <td>
+            <span class="badge medium">
+                MEDIUM
+            </span>
+        </td>
+    </tr>
+    
+    <tr>
+        <td>19</td>
+        <td><strong>Prodilog store setif</strong></td>
+        <td>Electronics store</td>
+        <td>Cluster 4</td>
+        <td><strong>60.95</strong></td>
+        <td>
+            <span class="badge medium">
+                MEDIUM
+            </span>
+        </td>
+    </tr>
+    
+    <tr>
+        <td>20</td>
+        <td><strong>TRADELEC Eurl</strong></td>
+        <td>Electrical supply store</td>
+        <td>Cluster 0</td>
+        <td><strong>60.75</strong></td>
+        <td>
+            <span class="badge medium">
+                MEDIUM
+            </span>
+        </td>
+    </tr>
+    
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+
+<!-- ====================================================== -->
+<!-- CLUSTER SUMMARY -->
+<!-- ====================================================== -->
+
+<div class="panel">
+
+    <h3>
+        Cluster Summary
+    </h3>
+
+    <p style="color:#64748b;">
+        Overview of the main characteristics of each customer segment.
+    </p>
+
+    <div style="overflow-x:auto;">
+
+        <table>
+
+            <thead>
+
+                <tr>
+                    <th>Cluster</th>
+                    <th>Businesses</th>
+                    <th>Average Rating</th>
+                    <th>Website Presence</th>
+                    <th>Phone Presence</th>
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                
+    <tr>
+        <td><strong>Cluster 0</strong></td>
+        <td>7</td>
+        <td>N/A</td>
+        <td>14.3%</td>
+        <td>85.7%</td>
+    </tr>
+    
+    <tr>
+        <td><strong>Cluster 1</strong></td>
+        <td>7</td>
+        <td>2.51</td>
+        <td>14.3%</td>
+        <td>71.4%</td>
+    </tr>
+    
+    <tr>
+        <td><strong>Cluster 2</strong></td>
+        <td>18</td>
+        <td>4.51</td>
+        <td>100.0%</td>
+        <td>94.4%</td>
+    </tr>
+    
+    <tr>
+        <td><strong>Cluster 3</strong></td>
+        <td>11</td>
+        <td>N/A</td>
+        <td>0.0%</td>
+        <td>0.0%</td>
+    </tr>
+    
+    <tr>
+        <td><strong>Cluster 4</strong></td>
+        <td>22</td>
+        <td>4.86</td>
+        <td>0.0%</td>
+        <td>100.0%</td>
+    </tr>
+    
+    <tr>
+        <td><strong>Cluster 5</strong></td>
+        <td>33</td>
+        <td>4.72</td>
+        <td>0.0%</td>
+        <td>100.0%</td>
+    </tr>
+    
+    <tr>
+        <td><strong>Cluster 6</strong></td>
+        <td>14</td>
+        <td>4.74</td>
+        <td>0.0%</td>
+        <td>0.0%</td>
+    </tr>
+    
+    <tr>
+        <td><strong>Cluster 7</strong></td>
+        <td>9</td>
+        <td>N/A</td>
+        <td>22.2%</td>
+        <td>100.0%</td>
+    </tr>
+    
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+
+<!-- ====================================================== -->
+<!-- BUSINESS INTERPRETATION -->
+<!-- ====================================================== -->
+
+<div class="panel">
+
+    <h3>
+        Business Interpretation
+    </h3>
+
+
+    <div class="insight">
+
+        <strong>1. Customer segmentation:</strong>
+
+        The clustering stage groups businesses with similar
+        characteristics into 8 segments.
+        This allows the sales team to avoid treating every
+        business as an identical prospect.
+
+    </div>
+
+
+    <div class="insight">
+
+        <strong>2. Prospect prioritization:</strong>
+
+        The prospect-scoring stage ranks businesses according
+        to their potential commercial value for the factory's
+        products.
+
+    </div>
+
+
+    <div class="insight">
+
+        <strong>3. Sales focus:</strong>
+
+        The highest-ranked businesses should be investigated
+        first, especially those whose activities suggest that
+        they can distribute or resell electricity meters,
+        gas meters and gas leak detectors.
+
+    </div>
+
+
+    <div class="insight">
+
+        <strong>4. B2B orientation:</strong>
+
+        Wholesale potential is considered because the objective
+        is to identify potential clients for the factory's
+        products, particularly wholesalers and businesses
+        capable of distributing them.
+
+    </div>
+
+
+    <div class="insight">
+
+        <strong>5. Important limitation:</strong>
+
+        The prospect score is a prioritization model based on
+        the available dataset. A high score means that a
+        business is a strong candidate for commercial
+        investigation; it does not prove that the business
+        will purchase the products.
+
+    </div>
+
+</div>
+
+
+<div class="footer">
+
+    UFMEEG — Customer Segmentation & Prospect Scoring
+
+    <br>
+
+    Generated automatically from the project analysis results.
+
+</div>
+
+
+</div>
+
+
+<script>
+
+
+// ==========================================================
+// PROSPECT DISTRIBUTION
+// ==========================================================
+
+new Chart(
+    document.getElementById("prospectChart"),
+    {
+        type: "doughnut",
+
+        data: {
+            labels: ["HIGH", "MEDIUM", "LOW"],
+
+            datasets: [{
+                data: [5, 19, 97]
+            }]
+        },
+
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+
+            plugins: {
+                legend: {
+                    position: "bottom"
+                }
+            }
+        }
+    }
+);
+
+
+// ==========================================================
+// CLUSTER DISTRIBUTION
+// ==========================================================
+
+new Chart(
+    document.getElementById("clusterChart"),
+    {
+        type: "bar",
+
+        data: {
+            labels: ["Cluster 0", "Cluster 1", "Cluster 2", "Cluster 3", "Cluster 4", "Cluster 5", "Cluster 6", "Cluster 7"],
+
+            datasets: [{
+                label: "Businesses",
+
+                data: [7, 7, 18, 11, 22, 33, 14, 9],
+
+                borderWidth: 1
+            }]
+        },
+
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+
+            scales: {
+                y: {
+                    beginAtZero: true,
+
+                    ticks: {
+                        precision: 0
+                    }
+                }
+            },
+
+            plugins: {
+                legend: {
+                    display: false
+                }
+            }
+        }
+    }
+);
+
+
+// ==========================================================
+// PCA SCATTER PLOT
+// ==========================================================
+
+const pcaPoints = [
+    {x:-0.2756175294794228,y:2.546100990122708,cluster:"4",name:"Sarl Sodimfel"},
+{x:-0.6112774158937053,y:1.6190420196039326,cluster:"4",name:"Samcab - Fourmas Elec"},
+{x:-2.54486507981228,y:1.6358686207543458,cluster:"0",name:"INES \u00c9lectricit\u00e9"},
+{x:-0.944680081604829,y:2.096159618883905,cluster:"4",name:"SABIL ELEC"},
+{x:0.4006417776368363,y:1.899055667208288,cluster:"4",name:"Electronique El Merikh setif 2"},
+{x:-2.1123077142092583,y:0.9350427171040828,cluster:"0",name:"Ets. Beddiaf Abd El Halim"},
+{x:-2.54486507981228,y:1.6358686207543456,cluster:"0",name:"TRADELEC Eurl"},
+{x:0.3244357003255224,y:0.4827773019680529,cluster:"5",name:"SETIFLEX"},
+{x:-1.5478925832805717,y:1.522777231242508,cluster:"0",name:"SODIMFEL SETIF STOCK"},
+{x:-0.3221429947251876,y:2.624855323794258,cluster:"4",name:"SARL KAZELEC"},
+{x:-1.0438347814967308,y:2.319867923254197,cluster:"4",name:"zone electrique"},
+{x:0.1835219480585821,y:0.0240252912526666,cluster:"5",name:"Groupe Riadh El Feth"},
+{x:-0.0393502063380368,y:1.860738816128143,cluster:"4",name:"MB Electro"},
+{x:-2.6990653030313907,y:-0.1791860705828364,cluster:"0",name:"Moonlight"},
+{x:-1.0438347814967308,y:2.319867923254197,cluster:"4",name:"SARL MARBER ET GRANIT CHEURFA BASSIT"},
+{x:0.0852283639063493,y:2.698594690392738,cluster:"4",name:"\u00c9lectricien B\u00e2timentset industrielle"},
+{x:-0.1745780003648925,y:2.438688766943232,cluster:"4",name:"Snc fr\u00e8re bendaoud \u00e9lectricit\u00e9 industrielle"},
+{x:-0.6829888881109594,y:2.4723616235242267,cluster:"4",name:"Electricien industriel en b\u00e2timent"},
+{x:-2.54486507981228,y:1.635868620754346,cluster:"0",name:"ABB \u00e9lectricit\u00e9 industriel"},
+{x:-1.0438347814967308,y:2.319867923254197,cluster:"4",name:"Electricite industrial maintenance"},
+{x:-0.6112774158937091,y:1.6190420196039326,cluster:"4",name:"Zendaoui electric"},
+{x:1.0217969021822637,y:1.7654045590430054,cluster:"4",name:"Dar Electronique"},
+{x:0.5198530613386468,y:1.8018103936904029,cluster:"4",name:"\u0645\u0624\u0633\u0633\u0629 \u0639\u0628\u062f \u0627\u0644\u0645\u0627\u0644\u0643 \u0644\u0628\u064a\u0639 \u0627\u0644\u0625\u062c\u0647\u0632\u0629 \u0627\u0644\u0643\u0647\u0631\u0648\u0645\u0646\u0632\u0644\u064a\u0629 \u0628\u0627\u0644\u062a\u0642\u0633\u064a\u0637"},
+{x:-0.0393502063380368,y:1.860738816128143,cluster:"4",name:"Taiba Electric"},
+{x:-0.6829888881109594,y:2.4723616235242267,cluster:"4",name:"Ben Lahcene \u00e9lectricit\u00e9 industrielle el eulma"},
+{x:1.7672425706414507,y:0.4472665560736715,cluster:"5",name:"K-PLAST Cables"},
+{x:1.3502254565455778,y:0.8102036943733985,cluster:"5",name:"FAY CABLE"},
+{x:-0.1100944734681552,y:1.584802183614845,cluster:"4",name:"Prodilog store setif"},
+{x:-0.6112774158937091,y:1.6190420196039326,cluster:"4",name:"Electro star"},
+{x:-0.4001960997238084,y:1.7082451158581122,cluster:"4",name:"IDEAL SOLUTION FACILIT\u00c9 SETIF"},
+{x:-2.54486507981228,y:1.635868620754346,cluster:"0",name:"Sarl FAMELEC distributeur Schneider"},
+{x:1.218091488233958,y:0.7196883043154721,cluster:"2",name:"Sarl 2aSYS Automation"},
+{x:1.029876847428068,y:0.4860136236634677,cluster:"2",name:"Metaplast Industrie"},
+{x:-0.6829888881109594,y:2.4723616235242267,cluster:"4",name:"la maison Industriel"},
+{x:0.5459117497586433,y:-0.307251697936391,cluster:"5",name:"EST PROFILAGE / DILMI AUTOMATISME"},
+{x:-1.0495764549656357,y:-0.7570138421702018,cluster:"6",name:"NOVASOLUTION montage maintenance industrielle"},
+{x:0.7312669442175129,y:-0.0878074593564143,cluster:"5",name:"National Company of Structural Steel and Biolermaking"},
+{x:1.6808243670694922,y:0.5150643916902322,cluster:"2",name:"Novum Industrial Consulting Services."},
+{x:-0.118909419455548,y:0.8045830257513716,cluster:"5",name:"Merouane courroie industrielle"},
+{x:0.3230059771520121,y:0.4756620809320392,cluster:"5",name:"URBASE"},
+{x:2.972239935284288,y:-0.0196395470585085,cluster:"2",name:"socoemod"},
+{x:-2.5560664786668763,y:-1.1648832410223755,cluster:"3",name:"Machine setif"},
+{x:0.4412910984652083,y:0.1341046521944142,cluster:"5",name:"SGT ALGERIE SPA UNIT\u00c9 DE PR\u00c9FORME, S\u00c9TIF"},
+{x:1.9116913561910909,y:-0.0261018869908005,cluster:"2",name:"ZOMRA"},
+{x:0.6164553755888746,y:0.2081291852799453,cluster:"5",name:"Dadi plastique s.a.r.l.,"},
+{x:-0.8554315854935509,y:-0.3729363659513967,cluster:"6",name:"EURL TISMAC"},
+{x:-2.5560664786668763,y:-1.1648832410223755,cluster:"3",name:"Maintenance industriel (bobinage)"},
+{x:2.1537384438284977,y:0.6333130381227992,cluster:"2",name:"EURL ZOUAOUI TRAVAUX DE CONSTRUCTION"},
+{x:1.1252192183654222,y:0.406437095014781,cluster:"5",name:"Omarco - \u0639\u0645\u0627\u0631\u0643\u0648"},
+{x:-0.1400067649712333,y:-1.2562540391401804,cluster:"6",name:"AMO"},
+{x:2.4053161806273144,y:-0.2424109942591188,cluster:"2",name:"EMIVAR Setif"},
+{x:0.1808198156294182,y:-0.2544078618793688,cluster:"5",name:"CERA HOUSE SETIF"},
+{x:2.376370642820702,y:0.0406046765215784,cluster:"2",name:"Groupe SAFCER Fabrication des carreaux C\u00e9ramiques et produits rouges"},
+{x:0.3305843928452891,y:-0.1911172578635178,cluster:"5",name:"Meriane Etanche"},
+{x:0.852893100608813,y:-0.3148453565938357,cluster:"5",name:"DIVINDUS DMC S\u00e9tif"},
+{x:-0.4059377731927137,y:-1.3686366495662865,cluster:"6",name:"EPTR SUD-EST Unit\u00e9 de s\u00e9tif"},
+{x:0.9667109959912266,y:-0.4567023476453865,cluster:"2",name:"REHAU SETIF"},
+{x:0.014193458247877,y:0.558800652197002,cluster:"5",name:"EURL CHERAITIA NOUREDDINE"},
+{x:2.506080724597996,y:-0.452743439852807,cluster:"1",name:"Tasmeem setif"},
+{x:-2.1180493876781634,y:-2.1418390483203167,cluster:"3",name:"BET Mosaic \"Architecture et Construction\""},
+{x:-0.0302615005404822,y:-0.3436109581335482,cluster:"5",name:"Sellah Placo Setif \ud83d\udc8b"},
+{x:1.0192621251439118,y:-1.2092183907498588,cluster:"6",name:"\u0641\u064a\u0644\u0627 \u062a\u064a\u062a\u0627\u0646\u064a\u0643"},
+{x:-1.5312917988560315,y:-1.0276102606333992,cluster:"7",name:"Entreprise benbahouche anouar"},
+{x:-0.1158361469370605,y:-1.492079581809553,cluster:"6",name:"Algeria Metal Group"},
+{x:0.1808198156294182,y:-0.2544078618793688,cluster:"5",name:"Snc El Assira Kheloufi et Cie"},
+{x:-0.0302615005404822,y:-0.3436109581335482,cluster:"5",name:"Ch Am\u00e9nagement"},
+{x:4.0500736773674095,y:-1.2552274252973403,cluster:"2",name:"Department of urban planning, architecture and construction DUAC"},
+{x:4.642179876520891,y:-2.333619304386474,cluster:"1",name:"Mono DZ"},
+{x:-1.5312917988560315,y:-1.0276102606333992,cluster:"7",name:"MEKHALFI KAMEL"},
+{x:0.1808198156294182,y:-0.2544078618793688,cluster:"5",name:"\u0645\u0642\u0627\u0648\u0644\u0629 \u0644\u0639\u0644\u0649 \u0627\u0644\u0646\u0648\u0631\u064a"},
+{x:0.3877792025570989,y:-1.3292492452899278,cluster:"7",name:"Kledarc"},
+{x:-0.6170190893626143,y:-1.4578397458204662,cluster:"6",name:"Maison GM"},
+{x:0.1808198156294182,y:-0.2544078618793688,cluster:"5",name:"SNC-MIBC"},
+{x:1.1762623830910832,y:-0.0305652589526679,cluster:"5",name:"Groupe hamzi carrelage et monocouche setif"},
+{x:-0.6170190893626143,y:-1.4578397458204662,cluster:"6",name:"IRIS, unit\u00e9 de transformation de la t\u00f4le (UTT)"},
+{x:-0.0302615005404822,y:-0.3436109581335482,cluster:"5",name:"\u0634\u0631\u0643\u0629 \u0645\u0647\u0646\u0627\u0646\u0629 \u0628\u0644\u0627\u0644 \u0644\u0644\u0625\u0633\u062a\u0631\u0627\u062f \u0648 \u0627\u0644\u062a\u0635\u062f\u064a\u0631"},
+{x:2.8577290982445445,y:-0.0512210122696149,cluster:"2",name:"Societ\u00e9 d'Etudes Techniques de Setif (SETS)"},
+{x:-0.4059377731927137,y:-1.3686366495662865,cluster:"6",name:"DZ LINE distributeur officiel S\u00e9tif"},
+{x:0.7544687318298982,y:-1.862408378539352,cluster:"1",name:"OCTOPUS CONSTRUCTION ENTREPRISE DE TRAVAUX DE B\u00c2TIMENT TOUS CORPS D'ETAT"},
+{x:-0.0302615005404822,y:-0.3436109581335482,cluster:"5",name:"Atelier Rf aluminium"},
+{x:0.5955000121294577,y:0.4600050801419595,cluster:"5",name:"SARL PROSATI"},
+{x:-0.6170190893626143,y:-1.4578397458204662,cluster:"6",name:"CTTP SETIF"},
+{x:-2.1180493876781634,y:-2.1418390483203167,cluster:"3",name:"ELBAR company"},
+{x:0.910787645356595,y:-0.4380031223500508,cluster:"5",name:"FORMA TECH"},
+{x:0.5433874156599975,y:-1.9516114747935327,cluster:"1",name:"CITAL SETIF"},
+{x:-1.5312917988560315,y:-1.0276102606333992,cluster:"7",name:"AD FIXE SETIF"},
+{x:-2.1180493876781634,y:-2.1418390483203167,cluster:"3",name:"Design and construction"},
+{x:-0.2571972753592939,y:0.7225479454185723,cluster:"5",name:"SARL S.M.P.A"},
+{x:-2.1180493876781634,y:-2.1418390483203167,cluster:"3",name:"Entreprise Travaux Publics"},
+{x:1.1417713042766895,y:-0.5707282270067056,cluster:"1",name:"ETP BAOUTA SALAH-EDDINE"},
+{x:0.5351113727043637,y:-1.463028813782789,cluster:"6",name:"\u062a\u064a\u0646\u0627\u0631"},
+{x:-1.5312917988560315,y:-1.0276102606333992,cluster:"7",name:"Snc sinane structures fr\u00e8res Benbahouche"},
+{x:0.9152346243590374,y:0.0067482835049107,cluster:"5",name:"Seddik Valpaint Setif"},
+{x:0.9783372957857868,y:-0.1900478875454773,cluster:"2",name:"ISKEN - \u0625\u0633\u0643\u0627\u0646 | Direction G\u00e9n\u00e9rale"},
+{x:-0.6170190893626143,y:-1.4578397458204662,cluster:"6",name:"\u0627\u0644\u062f\u064a\u0648\u0627\u0646 \u0627\u0644\u0648\u0637\u0646\u064a \u0644\u0644\u0645\u0637\u0628\u0648\u0639\u0627\u062a \u0627\u0644\u0645\u062f\u0631\u0633\u064a\u0629"},
+{x:0.1808198156294182,y:-0.2544078618793688,cluster:"5",name:"Damani Design"},
+{x:-1.5312917988560315,y:-1.0276102606333992,cluster:"7",name:"Combatis Issaadi"},
+{x:-2.5506067532811856,y:-1.4410131446700525,cluster:"3",name:"Eurl sediki l'annexe S\u00e9tif"},
+{x:0.1808198156294182,y:-0.2544078618793688,cluster:"5",name:"ETB LASMI MOURAD"},
+{x:2.5294316337394727,y:0.1544963592244119,cluster:"2",name:"Archi-Design Architecture, Interior Design & Finishing Company"},
+{x:1.7665334844145584,y:0.2728479312841618,cluster:"2",name:"Bergerat Monnoyeur Alg\u00e9rie - Setif | BMA"},
+{x:1.3412263206520298,y:-0.7481795908524348,cluster:"1",name:"Enpi SETIF"},
+{x:0.4980910322878544,y:-1.626297669382928,cluster:"6",name:"zone d'entrep\u00f4t et d'activit\u00e9"},
+{x:-0.0302615005404822,y:-0.3436109581335482,cluster:"5",name:"Granitex S\u00e9tif"},
+{x:1.7103482569934352,y:-1.0842685515931474,cluster:"1",name:"\u0645\u0624\u0633\u0633\u0629 \u0627\u0644\u062a\u0631\u0642\u064a\u0629 \u0627\u0644\u0639\u0642\u0627\u0631\u064a\u0629 \u0633\u0639\u064a\u062f\u064a \u0639\u0628\u062f \u0627\u0644\u062d\u0645\u064a\u062f"},
+{x:-2.5506067532811856,y:-1.4410131446700525,cluster:"3",name:"Sarl Groupe Cmmc S\u00e9tif"},
+{x:2.23842977729394,y:-0.7466297135885779,cluster:"2",name:"CFCE SETIF"},
+{x:2.28158153815976,y:0.0989627659852163,cluster:"2",name:"inhouse S\u00e9tif"},
+{x:-0.6170190893626143,y:-1.4578397458204662,cluster:"6",name:"cite 750 logts - s\u00e9tif"},
+{x:0.5678112200355221,y:0.6775329540993766,cluster:"5",name:"Sarl Setif Forja"},
+{x:-2.5506067532811856,y:-1.4410131446700525,cluster:"3",name:"SARL CYNABET & Sotrefil"},
+{x:2.6938390596560016,y:-0.926927686070402,cluster:"2",name:"Promotion Immobili\u00e8re Baghded - Setif"},
+{x:1.70002908255733,y:0.1149395129945839,cluster:"2",name:"GUEZZOUT IMMOBILIER"},
+{x:0.1808198156294182,y:-0.2544078618793688,cluster:"5",name:"cfmoto"},
+{x:-2.5506067532811856,y:-1.4410131446700525,cluster:"3",name:"Sarl setif gomme"},
+{x:0.1557107542499765,y:1.59871561473339,cluster:"4",name:"SIRIUS SERVICES - ABB PARTENER"},
+{x:-1.5312917988560315,y:-1.0276102606333992,cluster:"7",name:"Bureau expert Hammachi Zahir | \u0645\u0643\u062a\u0628 \u0627\u0644\u062e\u0628\u064a\u0631 \u062d\u0645\u0627\u0634\u064a \u0632\u0647\u064a\u0631"},
+{x:-0.9668766679273448,y:-0.4398757464949728,cluster:"7",name:"SARL HILLS INDUSTRIES"},
+{x:-1.5312917988560315,y:-1.0276102606333992,cluster:"7",name:"GH Pub & Fa\u00e7ades"},
+{x:-2.1180493876781634,y:-2.1418390483203167,cluster:"3",name:"Chrome colortek setif"},
+{x:0.923637367738932,y:-0.0389087240805383,cluster:"5",name:"Daisy Setif D\u00e9coration Boutique"}
+];
+
+
+const grouped = {};
+
+
+pcaPoints.forEach(point => {
+
+    if (!grouped[point.cluster]) {
+        grouped[point.cluster] = [];
+    }
+
+    grouped[point.cluster].push({
+        x: point.x,
+        y: point.y,
+        name: point.name
+    });
+
+});
+
+
+const pcaDatasets = Object.keys(grouped).map(
+    cluster => {
+
+        return {
+            label: "Cluster " + cluster,
+
+            data: grouped[cluster],
+
+            pointRadius: 6,
+
+            pointHoverRadius: 9
+        };
+
+    }
+);
+
+
+new Chart(
+    document.getElementById("pcaChart"),
+    {
+
+        type: "scatter",
+
+        data: {
+            datasets: pcaDatasets
+        },
+
+        options: {
+
+            responsive: true,
+
+            maintainAspectRatio: false,
+
+            scales: {
+
+                x: {
+                    title: {
+                        display: true,
+                        text: "Principal Component 1"
+                    }
+                },
+
+                y: {
+                    title: {
+                        display: true,
+                        text: "Principal Component 2"
+                    }
+                }
+
+            },
+
+            plugins: {
+
+                tooltip: {
+
+                    callbacks: {
+
+                        label: function(context) {
+
+                            const point =
+                                context.raw;
+
+                            if (point.name) {
+
+                                return (
+                                    point.name +
+                                    " — Cluster " +
+                                    context.dataset.label
+                                        .replace(
+                                            "Cluster ",
+                                            ""
+                                        )
+                                );
+
+                            }
+
+                            return (
+                                "Cluster " +
+                                context.dataset.label
+                            );
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+);
+
+</script>
+
+
+</body>
+
+</html>
