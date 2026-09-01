@@ -1,0 +1,9 @@
+cluster,business_count,percentage,avg_rating_rated,rated_businesses,avg_review_count,median_review_count,website_pct,phone_pct,social_media_pct,electrical_related_pct,industrial_related_pct,dominant_category_group,descriptive_profile
+0,7,5.8,,0,0.0,0.0,14.3,85.7,0.0,100.0,71.4,Electrical_Electronics,strong electrical relevance; strong industrial relevance; low website presence; low public engagement
+1,7,5.8,2.51,7,3.57,1.0,14.3,71.4,14.3,0.0,0.0,Construction_Engineering,low website presence
+2,18,14.9,4.51,18,14.06,9.5,100.0,94.4,11.1,0.0,27.8,Construction_Engineering,moderate industrial relevance; strong website presence; higher public engagement
+3,11,9.1,,0,0.0,0.0,0.0,0.0,0.0,0.0,54.5,Construction_Engineering,strong industrial relevance; low website presence; low public engagement
+4,22,18.2,4.86,22,4.68,3.0,0.0,100.0,0.0,100.0,50.0,Electrical_Electronics,strong electrical relevance; strong industrial relevance; low website presence
+5,33,27.3,4.72,33,5.09,2.0,0.0,100.0,0.0,0.0,24.2,Construction_Engineering,low website presence
+6,14,11.6,4.74,14,3.0,2.0,0.0,0.0,0.0,0.0,14.3,Construction_Engineering,low website presence; low public engagement
+7,9,7.4,,0,0.0,0.0,22.2,100.0,11.1,0.0,22.2,Construction_Engineering,low public engagement

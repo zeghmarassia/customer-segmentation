@@ -1,0 +1,41 @@
+cluster,business_name,category,city,rating,review_count,has_website,electrical_related,industrial_related
+0,INES Électricité,Electrical supply store,Setif,,0.0,False,True,True
+0,Ets. Beddiaf Abd El Halim,Electrical supply store,Setif,,0.0,False,True,False
+0,TRADELEC Eurl,Electrical supply store,Setif,,0.0,False,True,True
+0,SODIMFEL SETIF STOCK,Electrical equipment supplier,Guedjel,,0.0,True,True,True
+0,Moonlight,Electrical supply store,Setif,,0.0,False,True,False
+1,Tasmeem setif,Home builder,Setif,2.6,17.0,False,False,False
+1,OCTOPUS CONSTRUCTION ENTREPRISE DE TRAVAUX DE BÂTIMENT TOUS CORPS D'ETAT,Home builder,Setif,3.0,2.0,False,False,False
+1,Enpi SETIF,Building firm,Setif,3.0,2.0,False,False,False
+1,Mono DZ,Construction company,Setif,1.0,1.0,True,False,False
+1,CITAL SETIF,Construction company,Setif,3.0,1.0,False,False,False
+2,CFCE SETIF,Air conditioning contractor,Setif,4.5,40.0,True,False,False
+2,"Archi-Design Architecture, Interior Design & Finishing Company",Architectural designer,Setif,4.9,35.0,True,False,False
+2,Societé d'Etudes Techniques de Setif (SETS),Road construction company,Setif,4.2,30.0,True,False,False
+2,inhouse Sétif,Interior architect office,Setif,5.0,24.0,True,False,False
+2,Groupe SAFCER Fabrication des carreaux Céramiques et produits rouges,Construction company,Setif,4.8,23.0,True,False,False
+3,Machine setif,Millwork shop,Setif,,0.0,False,False,True
+3,Maintenance industriel (bobinage),Machine shop,Ain Arnat,,0.0,False,False,True
+3,"BET Mosaic ""Architecture et Construction""",Construction company,Setif,,0.0,False,False,False
+3,ELBAR company,Construction company,Setif,,0.0,False,False,False
+3,Design and construction,Construction company,Setif,,0.0,False,False,False
+4,Dar Electronique,Store,Setif,4.4,19.0,False,True,False
+4,Électricien Bâtimentset industrielle,Electrician,Setif,4.8,13.0,False,True,True
+4,Electronique El Merikh setif 2,Electronics store,Setif,4.7,9.0,False,True,False
+4,Snc frère bendaoud électricité industrielle,Store,Setif,5.0,8.0,False,True,True
+4,مؤسسة عبد المالك لبيع الإجهزة الكهرومنزلية بالتقسيط,Appliance store,Setif,4.4,8.0,False,True,False
+5,K-PLAST Cables,Corporate office,Setif,4.5,35.0,False,False,False
+5,Omarco - عماركو,Real estate developer,Setif,5.0,17.0,False,False,False
+5,FAY CABLE,Corporate office,Setif,3.8,16.0,False,False,True
+5,Groupe hamzi carrelage et monocouche setif,Construction company,Ain Arnat,4.6,12.0,False,False,False
+5,Seddik Valpaint Setif,Painter,Setif,4.9,10.0,False,False,False
+6,فيلا تيتانيك,Construction company,Setif,4.1,16.0,False,False,False
+6,تينار,Construction company,Setif,4.0,5.0,False,False,False
+6,AMO,Construction company,Setif,5.0,4.0,False,False,False
+6,zone d'entrepôt et d'activité,Construction company,Setif,3.7,3.0,False,False,False
+6,EURL TISMAC,Tire shop,Setif,5.0,2.0,False,False,True
+7,Entreprise benbahouche anouar,Construction company,Setif,,0.0,False,False,False
+7,MEKHALFI KAMEL,Construction company,Setif,,0.0,False,False,False
+7,Kledarc,Construction company,Setif,,0.0,True,False,True
+7,AD FIXE SETIF,Construction company,Setif,,0.0,False,False,False
+7,Snc sinane structures frères Benbahouche,Metal construction company,Setif,,0.0,False,False,False
